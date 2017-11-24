@@ -1,0 +1,9 @@
+.inline-div {
+  display: inline-block;
+}
+.user_one_editor, .user_two_editor {
+	padding: 1rem;
+	width: 580px;
+	height: 615px;
+	position: relative;
+}
