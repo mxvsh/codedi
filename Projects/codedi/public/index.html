@@ -2,16 +2,75 @@
 	<title>DiCode</title>
 	<meta charset="utf-8">
 	<link href="styles.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
 	<script src='/socket.io/socket.io.js'></script>
 	<script src="script.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/material-kit.js"></script>
+	<script src="js/material.min.js"></script>
+	
+	<script src="js/nouislider.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/demo.css" rel="stylesheet">
+	
+	<link href="css/material-kit.css" rel="stylesheet">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+    		</button>
+    		<a class="navbar-brand" href="#">CodeDi</a>
+    	</div>
+
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    		<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+        		<li><a href="#">Signup</a></li>
+    		</ul>
+    	</div>
+	</div>
+</nav>
+<div class="options">
+	<div class="togglebutton">
+		<label>
+			Allow Editing
+	    	<input type="checkbox" checked="">
+		</label>
+	</div>
+</div>
+<span class="center" id="join_link"></span>
+<br>
 <div class="inline-div">
-    <p align="center">User 1</p>
-    <textarea class="user_one_editor" id="user_one_editor"></textarea>
+    <p align="center" id="alias_host">Host</p>
+    <textarea class="form-control" id="host_editor" cols="50" rows="25"></textarea>
+    <div class="chat page">
+	      	<div class="chatArea">
+	        
+	      	</div>
+	      	<div class="col-sm-4">
+			<div class="form-group label-floating">
+				<label class="control-label">Enter your message</label>
+				<input type="email" class="form-control inputMessage" id="msg_box">
+			</div>
+		</div>
+	</div>
 </div>
 <div class="inline-div">
-<p align="center">User 2</p>
-    <textarea class="user_two_editor" id="user_two_editor"></textarea>
+		<ul class="messages">
+			
+		</ul>
+</div>
+<div class="inline-div">
+<p align="center" style="color:red" id="alias_client">Client (Not Connected)</p>
+    <textarea class="form-control " id="client_editor"  cols="50" rows="25" readonly=true></textarea>
 </div>
